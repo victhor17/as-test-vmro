@@ -11,7 +11,6 @@ function App() {
   const { error, evolutionChartData } = useGetPriceEvolutionChat();
   const {error: error2, presenceByProductData } = useGetPresenceByProduct()
   const {error: error3, productsData} = useGetProducts();
-console.log(productsData);
   if (error || error2 || error3) {
     return <h3>¡Ups! Algo ha salido mal...</h3>;
   }

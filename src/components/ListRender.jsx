@@ -3,7 +3,6 @@ import React from 'react';
 const getActive = (item) => {};
 const getPersistance = (number) => {
   const nmString = String(number * 100);
-  console.log(nmString, nmString?.startsWith('-'), nmString?.slice(1));
   return nmString.startsWith('-') ? nmString.slice(1) : nmString;
 };
 const getIsNegative = (item) => {
@@ -27,9 +26,10 @@ const ListRender = ({ list = [] }) => {
 
         <h3 className='item '>Av. Position</h3>
       </div>
-      {list?.map((item) => {
+      {list?.map((item, index) => {
         return (
           <div
+          key={`${index}.${item.name}`}
             className={`row ${getIsNegative(item)}`}
             active={() => {
               getActive(item);
