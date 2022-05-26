@@ -1,3 +1,81 @@
-.main{
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap');
+.main {
+  padding: 1rem;
+  height: 100%;
+  background-color: #f0f6ff;
+}
+
+.chartsContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.chartContainer {
+  margin: 0.5rem;
+  background-color: #ffffff;
+}
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 160%;
+}
+.subtitle {
+  line-height: normal;
+  font-size: 18px;
+}
+
+.tableContainer {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px dashed #7b61ff;
+  border-radius: 5px;
+}
+
+.image {
+  width: 121px;
+  height: 131px;
+}
+.item {
+  height: auto;
+  width: 16%;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.negative {
+  background-color: #D3D3D3;
+}
+
+.headerTable {
+  background-color: #a6a6a7;
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.contentText {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.contentText[isNegative='negative'] {
+  color: #D6215B ;
+}
+
+.contentText[isNegative='positive'] {
+  color: #23B794 ;
 }

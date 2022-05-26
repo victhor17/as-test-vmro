@@ -10,12 +10,17 @@ export const getEvolutionChartData = (EvolutionCharArray) => {
       curve: 'smooth',
     },
     title: {
-      text: 'Price evolution',
+      text: 'Price Evolution',
       align: 'left',
     },
     colors: ['#D6215B', '#7530B2', '#FFB448'],
     xaxis: {
       categories: getDatesArray(EvolutionCharArray),
+    },grid: {
+      row: {
+        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+        opacity: 0.5
+      },
     },
   };
 };

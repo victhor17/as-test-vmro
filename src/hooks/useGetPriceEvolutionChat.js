@@ -7,14 +7,12 @@ import { getEvolutionChartData } from '../constants/getEvolutionChartData';
 const useGetPriceEvolutionChat = () => {
   const currentList = useSelector((state) => state.priceEvolutionChart);
   const dispatch = useDispatch();
-  console.log(currentList);
 
   const [error, setError] = useState(null);
   const [evolutionChartData, setEvolutionChartData] = useState({});
 
   useEffect(() => {
     const getList = async () => {
-      console.log(currentList?.length);
       if (!currentList?.length) {
         try {
           const response = await priceEvolutionChartService();
